@@ -79,7 +79,7 @@ describe('MoviesService', () => {
       const movie = service.getOne(1);
       expect(movie.title).toEqual('Update test');
     });
-    it('should return a 404', () => {
+    it('should throw a NotFoundException', () => {
       try {
         service.update(999, {});
       } catch (error) {
